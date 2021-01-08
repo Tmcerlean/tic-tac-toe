@@ -1,0 +1,419 @@
+/* Main Styles */
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    overflow: hidden; /* Hide scrollbars */
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #3C493F;
+}
+
+
+/* Form Styling */
+input[type=text] {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    color: white;
+    font-weight: bolder;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #7E8D85;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #3C493F;
+}
+
+input[type=text]::placeholder {
+    color: white;
+    font-weight: bolder;
+}
+
+.form-label {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: 8px;
+}
+
+.form-button {
+    width:100%;
+    height:50px;
+    border:2px solid #3C493F;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin:0 0 40px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Main Container */
+.main-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header"
+      "body";
+}
+
+
+/* Header Container */
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    grid-area: header;
+    background-color: #7E8D85;
+    height: 100vh;
+    color: white;
+    font-size: xx-large;
+}
+
+.header-container.game-started {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    height: 20vh;
+  }
+
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5%;
+    width: 100%;
+}
+
+
+.start-game-buttons {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#computer-button {
+    margin-right: 30px;
+}
+
+/* Game Type Button */
+
+.game-type-button {
+  width:140px;
+  height:50px;
+  border:2px solid #3C493F;
+  float:left;
+  text-align:center;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 40px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.game-type-button a {
+  font-size:16px;
+  color:#3C493F;
+  text-decoration:none;
+  line-height:50px;
+  transition:all .5s ease;
+  z-index:2;
+  position:relative;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+
+.game-type-button-effect {
+  width:140px;
+  height:50px;
+  top:-2px;
+  right:-140px;
+  background:#3C493F;
+  position:absolute;
+  transition:all .5s ease;
+  z-index:1;
+}
+
+.game-type-button:hover .game-type-button-effect {
+  right:0;
+}
+
+.game-type-button:hover a {
+  color:#fff;
+}
+
+
+/* Modal Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Restart Button */
+.restart-button {
+    width:130px;
+    height:50px;
+    border:2px solid white;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin:0 0 40px 0;
+    margin-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+  
+.restart-button a {
+    font-size:16px;
+    color:white;
+    text-decoration:none;
+    line-height:50px;
+    transition:all .5s ease;
+    z-index:2;
+    position:relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+  
+.restart-button-effect {
+    width:140px;
+    height:50px;
+    top:-2px;
+    right:-140px;
+    background:#7E8D85;
+    position:absolute;
+    transition:all .5s ease;
+    z-index:1;
+}
+  
+.restart-button:hover .restart-button-effect {
+    right:0;
+}
+  
+.restart-button:hover a {
+    color:#fff;
+}
+
+
+/* Play Again Button */
+.play-again-button {
+    width:130px;
+    height:50px;
+    border:2px solid white;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin:0 0 40px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+  
+.play-again-button a {
+    font-size:16px;
+    color:white;
+    text-decoration:none;
+    line-height:50px;
+    transition:all .5s ease;
+    z-index:2;
+    position:relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+  
+.play-again-button-effect {
+    width:140px;
+    height:50px;
+    top:-2px;
+    right:-140px;
+    background:#7E8D85;
+    position:absolute;
+    transition:all .5s ease;
+    z-index:1;
+}
+  
+.play-again-button:hover .play-again-button-effect {
+    right:0;
+}
+  
+.play-again-button:hover a {
+    color:#fff;
+}
+
+
+/* Body Container */
+.body-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    grid-area: body;
+}
+
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin-top: 70px;
+    opacity: 1;
+}
+
+.game-container.no-opacity {
+    opacity: 0;
+}
+
+.game-container.no-opacity.increase-opacity {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    opacity: 1;
+}
+
+
+/* Game Cell */
+.game-cell {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    background-color: #B3BFB8;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-cell:hover,
+.game-cell:focus {
+    cursor: pointer;
+}
+
+
+.player-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    margin-top: 70px;
+    margin-right: 5%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    opacity: 0;
+}
+
+.player-one.increase-opacity {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    opacity: 1;
+}
+
+.player-one-name-div {
+    width: 50%;
+}
+
+.player-one-score-div {
+    width: 50%;
+}
+
+.player-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    margin-top: 70px;
+    margin-left: 5%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    opacity: 0;
+}
+
+.player-two.increase-opacity {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    opacity: 1;
+}
+
+.player-two-name-div {
+    width: 50%;
+}
+
+.player-two-score-div {
+    width: 50%;
+}
+
+/* Modal Pop-up */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content Box */
+.modal-content {
+    background-color: #33363d;
+    height: 150px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

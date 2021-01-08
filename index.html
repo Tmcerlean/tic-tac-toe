@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tic Tac Toe</title>
+  <meta name="author" content="Tom McErlean">
+  <meta name="description" content="A simple game of tic-tac-toe.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Modal Popup -->
+  <div class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <img class="winning-player-icon"></img>
+      <h2 class="winning-player"></h2>
+      <div class="modal-buttons">
+        <div class="restart-button">
+          <div class="restart-button-effect"></div>
+          <a href="#">Restart</a>
+        </div>
+        <div class="play-again-button">
+          <div class="play-again-button-effect"></div>
+          <a href="#">Play Again</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="header-container">
+      <h1 class="main-header">Tic Tac Toe</h1>
+      <div class="start-game-buttons">
+        <div class="game-type-button" id="computer-button">
+          <div class="game-type-button-effect"></div>
+          <a href="#">Computer</a>
+        </div>
+        <div class="game-type-button" id="player-button">
+          <div class="game-type-button-effect"></div>
+          <a href="#">Player</a>
+        </div>
+      </div>
+    </div>
+    <div class="body-container">
+      <div class="player-one">
+        <div class="player-one-name-div"></div>
+        <div class="player-one-score-div">0</div>
+      </div>
+      <div class="game-container">
+        <form class="two-player-form">
+          <label for="player-one-name" class="form-label">Player 1:</label><br>
+          <input type="text" id="player-one-name" name="player-one-name" placeholder="Enter Name" required>
+          <label for="player-two-name" class="form-label">Player 2:</label><br>
+          <input type="text" id="player-two-name" name="player-two-name" placeholder="Enter Name" required>
+          <button class="form-button" onclick="gameBoard.playerInit(event)">Submit</button>
+        </form>
+      </div>
+      <div class="player-two">
+        <div class="player-two-score-div">0</div>
+        <div class="player-two-name-div"></div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="button-audio">
+    <source src="sounds/button-click-1.mp3" type="audio/mp3">
+  </audio>
+  <audio id="player-1-audio">
+    <source src="sounds/player-1-place-marker.mp3" type="audio/mp3">
+  </audio>
+  <audio id="player-2-audio">
+    <source src="sounds/player-2-place-marker.mp3" type="audio/mp3">
+  </audio>
+  <audio id="winner-audio">
+    <source src="sounds/winner.mp3" type="audio/mp3">
+  </audio>
+  <audio id="main-screen-audio">
+    <source src="sounds/main-screen-music.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
